@@ -29,21 +29,21 @@ Written in XML format, defines the configuration, dependencies, and build settin
 
 ### Program.cs
 
-The entry point of the Application. Sets up the app's environment, services, and configuration.
-`var builder = WebApplication.CreateBuilder(args)` creates a new instance of the web application builder by invoking thhe static CreateBuilder Method
+The entry point of the Application. Sets up the app's environment, services, and configuration.<br>
+`var builder = WebApplication.CreateBuilder(args)` creates a new instance of the web application builder by invoking thhe static CreateBuilder Method<br>
 `builder.Services....`
-We then configure the services for the application, such as Blazor components and Interactive Server Components in this project
+We then configure the services for the application, such as Blazor components and Interactive Server Components in this project<br>
 `var app = builder.Build();`
 This line then builds our application instance
-Below this we add the middleware for the application
+Below this we add the middleware for the application<br>
 `app.UseHttpsRedirection();`
-Redirects HTTP request to HTTPS
+Redirects HTTP request to HTTPS<br>
 `app.UseStaticFiles();`
-Serves static files such as HTML, CSS, JavaScript from the wwwroot directory
+Serves static files such as HTML, CSS, JavaScript from the wwwroot directory<br>
 `app.UseAntiforgery();`
-Protects against cross-site requests forgery
+Protects against cross-site requests forgery<br>
 `app.MapRazorComponents<App>().AddInteractiveServerRenderMode();`
-Maps the App component as the root component for the Razor Components, enabling interactive server rendering mode
+Maps the App component as the root component for the Razor Components, enabling interactive server rendering mode<br>
 `app.Run();`
 Runs the application, making it ready to listen for, and handle HTTP requests
 
@@ -65,6 +65,6 @@ Stores configuration settings specifically for the development environment
 
 ### Components
 
-We can find all of the components for the app here.
-`App.razor` is our root component where the root HTML document is located as well as the Blazor Router and the Blazor script tags
+We can find all of the components for the app here.<br>
+`App.razor` is our root component where the root HTML document is located as well as the Blazor Router and the Blazor script tags <br>
 `Routes.razor` is where the routing configuration for the app is defined, it specifies the mapping between URLs and their corresponding components or pages to render
